@@ -1,6 +1,7 @@
 //Given a non-negative number represented as an array of digits, plus one to the number.
 //The digits are stored such that the most significant digit is at the head of the list.
 #include <vector>
+#include <iostream>
 
 vector<int> plusOne(vector<int> &digits)
 {
@@ -31,5 +32,5 @@ void testCase_plusOne()
     res = plusOne(s1);
 
     for (int i = 0; i < res.size(); i++)
-        cout<<res[i]<<'\t';
+        std::cout<<res[i]<<'\t';
 }

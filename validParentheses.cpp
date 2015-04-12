@@ -3,6 +3,7 @@
 // ASCII (  )    [   ]   {   }
 //       40 41   91 93  123 125
 #include <iostream>
+#include <cstring>
 #include <stack>
 
 int isLeft(char ch)
