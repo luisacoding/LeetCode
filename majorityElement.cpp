@@ -3,6 +3,7 @@
 //You may assume that the array is non-empty and the majority element always exist in the array.
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 

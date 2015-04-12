@@ -7,7 +7,9 @@ For example,
 */
 
 #include <iostream>
-#include <cstring>
+#include <string>
+#include <typeinfo>
+#include <ctype.h>
 
 string removeNoise(const string s)
 {
