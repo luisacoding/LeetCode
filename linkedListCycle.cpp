@@ -1,6 +1,14 @@
 #include "ListNode.h"
 
-bool hasCycle(ListNode *head) {
+/*
+141. Linked List Cycle
+Given a linked list, determine if it has a cycle in it.
+
+Follow up :
+Can you solve it without using extra space ?
+*/
+bool hasCycle(ListNode *head) 
+{
     /* Fist Solution: two pointers, one fast one slow
      * if they came cross, means that it has cycle
      * Time Complexity: O(N), Space Complexity: O(1)
