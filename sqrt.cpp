@@ -1,3 +1,4 @@
+#include <cstdlib>
 /*
 69. sqrt(x)
 Implement int sqrt(int x).
