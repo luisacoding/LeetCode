@@ -6,27 +6,51 @@
 //Given s = "Hello World",
 //return 5.
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
+int lengthOfLastWord(string s)
+{
+	int len = s.size();
+	if (len == 0)
+		return 0;
+	int count = 0;
+	for (int i = len - 1; i >= 0; i--)
+	{
+		if (s[i] == ' ')
+		{
+			if (!count)
+				continue;
+			else
+				return count;
+		}
+		count++;
+	}
+	return count;
+}
+
+
 int lengthOfLastWord(const char *s)
 {
-    if (s == "" || s == " ")
-        return 0;
-    int len = strlen(s);
-    int count = 0;
-    for (int i = len - 1; i >= 0; i--)
-    {
-        if (s[i] == ' ')
-        {
-            if (!count)
-                continue;
-            else
-                return count;
-        }
-        count++;
-    }
+	int len = strlen(s);
+	if (len == 0)
+		return 0;
+	int count = 0;
+	for (int i = len - 1; i >= 0; i--)
+	{
+		if (*(s + i) == ' ')
+		{
+			if (!count)
+				continue;
+			else
+				return count;
+		}
+		count++;
+	}
+	return count;
 }
+
 
 void testCase_lengthOfLastWord()
 {
@@ -45,3 +69,7 @@ void testCase_lengthOfLastWord()
     cout<<lengthOfLastWord(s6)<<endl;
 }
 
+int main()
+{
+	testCase_lengthOfLastWord();
+}
