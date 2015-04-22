@@ -14,35 +14,19 @@ Example: 19 is a happy number
 6^2 + 8^2 = 100
 1^2 + 0^2 + 0^2 = 1
 */
-#include <vector>
-#include <iostream>
-#include <algorithm>
-
-using namespace std;
-
 bool judgeMent(int n, vector<int> &map)
 {
 	if (n < 0)
 		return false;
-	if (n == 1)
-		return true;
-	if (n < 10)
-		return judgeMent(n * n, map);
 
 	vector<int> bitset;
-	for (int mod = 10; mod <= 10 * n; mod *= 10)
-		bitset.push_back((n % mod) / (mod / 10));
-
 	int res = 0;
-	for (size_t i = 0; i < bitset.size(); ++i)
+	int bit;
+	for (long long mod = 10; mod / 10 <= n; mod *= 10) // must be mod/10 <= n; mod <= 10*n will overflow
 	{
-		res += bitset[i] * bitset[i];
-	//	cout << bitset[i] << "^2";
-	//	if (i != bitset.size() - 1)
-	//		cout << " + ";
+		bit = (n % mod) / (mod / 10);
+		res += bit * bit;
 	}
-	//cout << " = " << res << endl;
-
 
 	if (res == 1)
 		return true;
