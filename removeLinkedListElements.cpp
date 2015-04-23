@@ -7,7 +7,7 @@ Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
 Return: 1 --> 2 --> 3 --> 4 --> 5
 */
 #include "ListNode.h"
-
+#include <iostream>
 
 void printListNode(ListNode *head)
 {
