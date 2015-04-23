@@ -11,6 +11,8 @@ Note: The result may be very large, so you need to return a string instead of an
 #include <algorithm>
 #include <string>
 
+using namespace std;
+
 class Solution {
 public:
 	string largestNumber(vector<int> &nums)
@@ -39,3 +41,17 @@ private:
 		return s1 + s2 > s2 + s1;
 	}
 };
+
+int main()
+{
+	Solution obj;
+	
+	int a[] = { 9, 30, 84, 5, 9, 78, 1, 64, 19 };
+	vector<int> nums(&a[0], &a[0] + sizeof(a) / sizeof(int));
+	cout << obj.largestNumber(nums) << endl;
+
+	vector<int> b = { 10, 2 };
+	cout << obj.largestNumber(b) << endl;
+	
+	return 0;
+}
