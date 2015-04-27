@@ -58,4 +58,3 @@ vector<int> preorderTraversal_2(TreeNode *root)
 	}
 	return res;
 }
-
