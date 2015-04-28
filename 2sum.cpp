@@ -18,6 +18,7 @@ Output: index1=1, index2=2
 using namespace std::tr1;
 
 // First Solution: Time Complexity: sort O(NlogN) + find O(N)
+// from: http://blog.csdn.net/magisu/article/details/12768283
 // we can also write a struct/class and implement a comparable function.
 typedef pair<int, int> valoffset_pair;
 vector<int> twoSum(vector<int> &numbers, int target)
